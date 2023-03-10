@@ -7,16 +7,27 @@
 
   FONT WEIGHT
     Default: 400
+    Medium: 500
+    Semi-bold: 600
+    Bold: 700
 
   LINE HEIGHT
     Defaut: 1
+    small: 1.05
+    medium: 1.2
+    paragraph default: 1.6
+
+    
+  LETTER SPACING
+    0.5px
+    0.75px
 
   SPACING SYSTEM (px)
   2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
 
   --- 02 COLOR SYSTEM
   - Primary #e67e22
-  - Tints: #fdf2e9
+  - Tints: #fdf2e9 #fae5d3
   - Shades: #cf711f
   - Accents:
   - Greys
@@ -54,45 +65,86 @@ body {
   color: #555;
 }
 
+/* ******************* */
+/* HEADER*/
+/* ******************* */
+.logo {
+  height: 2.2rem;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fdf2e9;
+
+  padding: 4.8rem;
+
+  /* Because nav bar need to stay on the top of the page */
+  height: 9.6rem;
+}
+
+/* ******************* */
+/*  NAVIIGATION SECTION */
+/* ******************* */
+.main-nav-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 3.2rem;
+}
+
+.main-nav-link:link,
+.main-nav-link:visited {
+  display: inline-block;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 1.8rem;
+  transition: all 0.3s;
+}
+
+.main-nav-link:hover,
+.main-nav-link:active {
+  color: #cf711f;
+}
+
+.main-nav-link.nav-cta:link,
+.main-nav-link.nav-cta:visited {
+  padding: 1.2rem 2.4rem;
+  border-radius: 9px;
+  color: #fff;
+  background-color: #e67e22;
+}
+
+.main-nav-link.nav-cta:hover,
+.main-nav-link.nav-cta:active {
+  background-color: #cf711f;
+}
+
+/* ******************* */
+/*  HERO SECTION */
+/* ******************* */
+
 .section-hero {
   background-color: #fdf2e9;
-  padding: 9.6rem 0;
+  padding: 4.8rem 0 9.6rem 0;
 }
 
 .hero {
   max-width: 130rem;
   margin: 0 auto;
+  padding: 0 3.2rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
   gap: 9.6rem;
 }
 
-.heading-primary {
-  font-size: 5.2rem;
-  font-weight: 700;
-  line-height: 1.05;
-  color: #333;
-  letter-spacing: -0.5px;
-  margin-bottom: 3.2rem;
-}
-
 .hero-description {
   font-size: 2rem;
   line-height: 1.6;
   margin-bottom: 4.8rem;
-}
-
-.btn:link,
-.btn:visited {
-  display: inline-block;
-  text-decoration: none;
-  background-color: #e67e22;
-  color: #fff;
-  font-size: 2rem;
-  padding: 1.6rem 3.2rem;
-  border-radius: 15px;
-  font-weight: 600;
 }
 
 .btn--full:link,
@@ -126,10 +178,6 @@ body {
   Instead using custom box-shadow to add border inside
   */
   box-shadow: inset 0 0 0 3px #fff;
-}
-
-.margin-right-sm {
-  margin-right: 1.6rem !important;
 }
 
 .hero-img {
@@ -167,4 +215,92 @@ body {
 .delivered-text span {
   color: #cf711f;
   font-weight: 700;
+}
+/* ******************* */
+/* FEATURED IN SECTION*/
+/* ******************* */
+.section-featured {
+  padding: 4.8rem 0 3.2rem 0;
+}
+.heading-featured-in {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.75px;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 2.4rem;
+  color: #888;
+}
+
+.logos {
+  display: flex;
+  justify-content: space-around;
+  filter: brightness(0);
+  opacity: 50%;
+}
+
+.logos img {
+  height: 3.2rem;
+}
+
+/* ******************* */
+/* HOW IT WORKS SECTION*/
+/* ******************* */
+.section-how {
+  padding: 100px 0;
+}
+
+.step-number {
+  font-size: 8.6rem;
+  font-weight: 600;
+  color: #ddd;
+  margin-bottom: 1.2rem;
+}
+
+.step-description {
+  font-size: 1.8rem;
+  line-height: 1.8;
+}
+
+.step-img-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.step-img-box::before,
+.step-img-box::after {
+  content: "";
+  display: block;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.step-img-box::before {
+  width: 60%;
+
+  /* height: 60%; */
+  /* 60% of parent's width */
+  padding-bottom: 60%;
+
+  background-color: #fdf2e9;
+  z-index: -2;
+}
+
+.step-img-box::after {
+  width: 45%;
+
+  /* height: 60%; */
+  /* 60% of parent's width */
+  padding-bottom: 45%;
+
+  background-color: #fae5d3;
+  z-index: -1;
+}
+
+.step-img {
+  width: 35%;
 }
