@@ -13,4 +13,4 @@ All this will be packed up in a monthly subscription,
 where users can choose between receiving one or two meals per day, every single day of the month.
 
 ## Project is deployed using Netlify.com
-### Check out [Here](omnifood-nathannguyen.netlify.app)
+### Check out [Here](https://omnifood-nathannguyen.netlify.app)
